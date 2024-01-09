@@ -4,6 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    
-</body>
+    <style>
+        * {
+   box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.box1 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+ 
+}
+.box1{
+  background-image: url(pexels-nino-sanger-19591104.jpg); /* The image used */
+  background-color: #d13f3f; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.box {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h1{
+    text-align: center;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .main {
+    width: 100%;
+  }
+}
+    </style>
+    <body>
+        <h1>Registration form </h1>
+        <div class="main">
+            <div class="box1" style="background-color:#aaa;">
+              
+            </div>
+            <div class="box" style="background-color:#bbb;">
+             <form action="">
+                <h2>Registration form </h2>
+                <label for="fullname">Full Name : </label>
+                <input type="text" name="firstname" id="">
+                <br>
+                <label for="date">Date of Birth :</label>
+                <input type="date" name="" id="">
+                <br>
+
+                <label for="email">Your Email :</label>
+                <input type="email" name="email" id="">
+                <label for="password">Password :</label>
+                <input type="password" name="password">
+                <label for="confirm password">Confirm Password :</label>
+                <input type="password" name="password" id="">
+                <br>
+                <br>
+                <br>
+                <input type="checkbox" name="singhup" id="">
+                <label for="singhup">For singning up you agree to the</label>
+                <a href="">term and condition </a>
+                <br>
+                <p id="demo">Click me.</p>
+                <br>
+                <button type="submit">SUBMIT </button>
+               
+             </form>
+            </div>
+          </div>
+          <script>
+            document.getElementById("demo").addEventListener("click", myFunction);
+
+                function myFunction() {
+                document.getElementById("demo").innerHTML = "YOU CLICKED ME!" ;
+                
+}
+          </script>
+        
+    </body>
 </html>
